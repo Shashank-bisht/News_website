@@ -30,7 +30,9 @@ export const AppContext = ({ children }) => {
  const fetchdatafromapi = async (category, currentpage) => {
      const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=${category}&pageSize=12&page=${currentpage}&apiKey=f667f2f013184d4c8514c28ce2bf40ef`).then((response) => {
        console.log(response?.data.articles)
-       setSearchResults(response?.data.articles)
+       setTimeout(()=>{
+        setSearchResults(response?.data.articles)
+       },3000) 
      }).catch((error) => {
        console.log(error)
      })
