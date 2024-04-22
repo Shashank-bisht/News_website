@@ -14,7 +14,7 @@ const Pagination = () => {
     };
   
     return (
-      <div className="flex mx-10 flex-row w-full justify-between gap-32">
+      <div className="flex my-5 flex-row w-full justify-around gap-32">
         <button onClick={handlePrevPage} className='bg-blue-200 p-2 rounded-lg' disabled={currentpage === 1}>Previous</button>
         <span className='bg-blue-200 rounded-lg p-2'>{currentpage}</span>
         <button onClick={handleNextPage}  className='bg-blue-200 p-2 rounded-lg mr-4' disabled={searchResults.length < pageSize}>Next</button>

@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Weather from './pages/Weather';
+import { About } from './pages/About';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route exact path='/sign-up' element={<Signup />} />
             <Route exact path='/sign-in' element={<Login />} />
             <Route exact path='/weather' element={<Weather />} />
+            <Route exact path='/about' element={<About />} />
           </Routes>
       </Router>
     </AppContext>
